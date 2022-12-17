@@ -39,6 +39,10 @@ bitMultiple函数把运算结果格式转换成了int8，导致精度大量失真！当时转换格式是为
     Module函数名改名为myModule，防止与Matlab内建函数重名的bug
     修改testModulate函数，增加row码元长度，防止码元与扩频码被交换的bug
 2022/4/28(以上)
+    i7-12700K:实测速率 0.91秒/轮回 @1280*2&1280码元20&10扩频增益 12线程
+    修复解调模块阈值解算的Bug，改为利用"norminv"解算阈值，
+    可见运行速度显著提高，同时改为var计算方差，感谢网友的提醒。
+2022/12/17(以上)
 %}
 clear variable;
 close all;
@@ -69,7 +73,7 @@ samplePiont = 4;
 walshCode = walsh(walshOrder);
 
 %针对低性能电脑做优化，采取以时间换取空间的思路
-maxSnr = 20;    %尝试的最大信噪比
+maxSnr = 40;    %尝试的最大信噪比
 minSnr = -20;   %尝试的最小信噪比
 div = 1;      %信噪比的尝试步进
 maxTime = (maxSnr-minSnr)/div;  %尝试次数
