@@ -114,6 +114,8 @@ for amp = 1:maxTimesAmp %测试不同的载波振幅下的曲线
     user1modulate = myModulate(user1scarm,carrier);
     user2modulate = myModulate(user2scarm,carrier);
     
+    %计算载波功率
+    power = powerCnt(carrier);
     for times = 1:mulTimes
 
         fprintf('目前正在第%d个轮回\n',times);
@@ -125,8 +127,8 @@ for amp = 1:maxTimesAmp %测试不同的载波振幅下的曲线
             snr = minSnr + (index-1)*div; %加在发送信号上的高斯噪声的信噪比(dBW)
                         
             %通过高斯信道，添加高斯噪声
-            user1send = awgn(user1modulate,snr);
-            user2send = awgn(user2modulate,snr);
+            user1send = awgn(user1modulate,snr,power);
+            user2send = awgn(user2modulate,snr,power);
 
             %接收方
             receive = user1send + user2send; %收到混合起来的信号
