@@ -1,150 +1,148 @@
 %{
-    ±¾º¯ÊýÊÇÕû¸ö·ÂÕæµÄÖ÷º¯Êý£¬ÓÃÓÚÑÐ¾¿ÔÚÒÆ¶¯Í¨ÐÅÊ±£¬ÐÅÔë±È¶ÔÎóÂëÂÊµÄÓ°Ïì
-Ê×ÏÈÉú³ÉËæ»úË«¼«ÐÔÂë£¬È»ºó¾­¹ýÀ©Æµ£¬¼ÓÈÅ£¬BPSKµ÷ÖÆ£¬¼Ó¸ßË¹°×ÔëÉù£¬»ìºÏ
-È»ºóÄ£Äâ½ÓÊÕ¶ËµÄ½âµ÷£¬È¥ÈÅ£¬½âÀ©£¬ÅÐ¾ö¡£
-    Í¨¹ý±È½Ï½ÓÊÕ¶ËÅÐ¾öÊä³öÓëÔ­À´µÄÂëÔª£¬¼ÆËã³öÎóÂëÂÊ£¬Ê×ÏÈÍ¨ÐÅÏµÍ³µÄ·ÂÕæ
-ÒÔ¼°ÎóÂëÂÊ-ÐÅÔë±ÈµÄ±ä»¯ÇúÏßµÄ»æÖÆ.
-2019/11/22(ÒÔÉÏ)
-    ÔÚµ±Ç°°æ±¾ÖÐ£¬Ìí¼ÓÁË¶ÔÐÅÔë±È&ÎóÂëÂÊÇúÏßËæBPSKµ÷ÖÆÔØ²¨Õñ·ù±ä»¯¶ø±ä»¯
-µÄÏà¹ØÑÐ¾¿¹¦ÄÜ¡£ÒòÎªÊµ¼Ê·¢ÏÖ£¬Ö®Ç°µÄ´úÂëÖÐÇúÏß»áÔÚ-20dBµ½0dB´¦³öÏÖÆ½»ºÏÖÏó£¬
-Êµ¼ÊÅÅ²é·¢ÏÖÊÇÔØ²¨µÄÕñ·ùµ¼ÖÂµÄ¡£Õñ·ùÑÐ¾¿½á¹û·¢ÏÖ£ºÕñ·ùÐ¡ÓÚ0.4Ê±£¬ÏµÍ³ÎÞ·¨Õý³£
-¹¤×÷£¡ÆäÎóÂëÂÊÇúÏßÔÚºóÆÚËæ×ÅÐÅÔë±ÈµÄÔö¼Ó³ÊÏÖ·´³£ÅòÕÍ£¡
-^-^ÏëÒªµÃµ½Å×ÎïÏß£¬Ö»ÓÐÔÚÔØ²¨Õñ·ùÎª1µÄÊ±ºò¡£^-^,²»È»Ëæ×ÅÕñ·ùµÄÔö¼Ó£¬ÇúÏßÇúÏßÇ÷ÓÚÆ½»ºµÄÐÅÔë±È·¶Î§»áÔ½´ó£»
-Í¬Ê±·¢ÏÖ´óÓÚ0.6µÄÇúÏß»á½üËÆÏà½»ÓÚÄ³Ò»µã£¬½»µãÇ°Í¬µÈÐÅÔë±ÈÏÂÕñ·ù¸ßµÄÎóÂëÂÊµÍ£¬µ«ÔÚ½»µãºó
-***Í¬µÈµÄÐÅÔë±ÈÏÂÕñ·ùÐ¡µÄÎóÂëÂÊ·´¶øµÍ£¡£¡£¡***
-    ÔÚ±¾°æ±¾ÖÐ£¬walsh¾ØÕóµÄËùÓÐÂëÔª¶¼±»ÓÃÓÚÀ©Æµ£¬Ã»ÓÐÊ¹ÓÃÇ°Ò»°æµÄ¾ØÕó½ØÈ¡·½·¨£¬
-¹æ±ÜÁË¹í÷È°æµÄ·ÇÑÏ¸ñÕý½»ÎÊÌâ£¬µ«Ç°ÃæµÄ½ØÈ¡°æ±¾Ç¡Ç¡ËµÃ÷·ÇÑÏ¸ñÕý½»¶Ô±¾ÏµÍ³Ó°ÏìÇúÏß
-µÄÓ°Ïì²¢²»ÊÇºÜ´ó£¬µ«È´¿ÉÒÔÊ¹µÃÏµÍ³ÄÜÔÚ¸üµÍµÄÎóÂëÂÊÏÂ¹¤×÷¡£
-    ÖÁ´Ë£¬´úÂëÒÑ¾­¾­Àú10´Î°æ±¾µü´ú¡£
-2019/12/1(ÒÔÉÏ)
-    µÚ¶þ´Î´ð±ç£¬ÈÔ³öÏÖ²¿·ÖÆ½»¬ÎÊÌâ£¬²¢ÇÒÀÏÊ¦ËµÏµÍ³ÐÔÄÜÌ«ºÃÁË£¬ÓëÊµ¼ÊÏµÍ³²»·û£¬²¢ÇÒ
-ÇúÏß²»Ó¦¸ÃÊÜÕñ·ùµÄÓ°Ïì£¬»ùÓÚ´ËÔÙ¶Ô´úÂë×öÐÞ¸Ä£¬¼ÆËãÁËÊäÈëÐÅºÅµÄÆ½¾ù¹¦ÂÊ£¬×÷ÎªµÚ3
-¸ö²ÎÊý´«¸øawgn£¬·ñÔòawgn»á°ÑÊäÈëÐÅºÅµÄ¹¦ÂÊÊÓÎª0dBW£¡ÏÖÔÚÇúÏß»ù±¾ÖØºÏ¡£µ«0.2Óë0.4
-µÄÎÊÌâÈÔÎ´½â¾ö£¡
-    ÖÁ´Ë£¬³ÌÐòµÚ11´Î°æ±¾µü´ú
-2019/12/2(ÒÔÉÏ)
-    µÚÊ®¶þ´Îµü´ú¡£
-    ·¢ÏÖÁËÎªÊ²Ã´Õñ·ùÊÇ0.2ºÍ0.4Ê±£¬ÏµÍ³ÎÞ·¨Õý³£¹¤×÷µÄÔ­Òò£¬ÊÇÒòÎª
-bitMultipleº¯Êý°ÑÔËËã½á¹û¸ñÊ½×ª»»³ÉÁËint8£¬µ¼ÖÂ¾«¶È´óÁ¿Ê§Õæ£¡µ±Ê±×ª»»¸ñÊ½ÊÇÎª
-ÄÚ´æ¿Õ¼äÓëÔËÐÐËÙ¶È×ö´òËã£¬½á¹û½ñÌì·¢ÏÖ×öÁË¸ºÓÅ»¯£¡ÐÞ¸Äºó£¬·¢ÏÖÔØ²¨Õñ·ù¶ÔÓÚÏµÍ³
-µÄÎóÂëÂÊÇúÏß¼¸ºõÎÞÓ°Ïì¡£
-    ÁíÍâ£¬½âµ÷º¯ÊýÒ²×öÁËÐÞ¸Ä£¬»á¸ù¾ÝÊäÈë×Ô¶¯¼ÆËãÅÐ¾öãÐÖµ£¬½â¾öÁËÖ®Ç°ÈËÎªÉè¶¨ãÐÖµ
-µÄ¾ÖÏÞ£¬ãÐÖµ²ÉÓÃÕýÌ¬·Ö²¼½âËã·¨£¬Ïê¼ûdemodulateº¯ÊýÄÚ×¢ÊÍ¡£
-2020/7/1(ÒÔÉÏ)
-    i7-4790:Êµ²âËÙÂÊ9.8Ãë/ÂÖ»Ø @1280*2&1280ÂëÔª20&10À©ÆµÔöÒæ
-    µÚÊ®Èý´Îµü´ú¡£
-    ½â¾ö¼ÓÈÅº¯ÊýÖ»Ê¹ÓÃÁËMÐòÁÐµÚÒ»ÐÐµÄÎÊÌâ¡£
-2022/1/21(ÒÔÉÏ)
-    i7-12700K:Êµ²âËÙÂÊ 2.4Ãë/ÂÖ»Ø @1280*2&1280ÂëÔª20&10À©ÆµÔöÒæ
-    Moduleº¯ÊýÃû¸ÄÃûÎªmyModule£¬·ÀÖ¹ÓëMatlabÄÚ½¨º¯ÊýÖØÃûµÄbug
-    ÐÞ¸ÄtestModulateº¯Êý£¬Ôö¼ÓrowÂëÔª³¤¶È£¬·ÀÖ¹ÂëÔªÓëÀ©ÆµÂë±»½»»»µÄbug
-2022/4/28(ÒÔÉÏ)
-    i7-12700K:Êµ²âËÙÂÊ 0.91Ãë/ÂÖ»Ø @1280*2&1280ÂëÔª20&10À©ÆµÔöÒæ 12Ïß³Ì
-    ÐÞ¸´½âµ÷Ä£¿éãÐÖµ½âËãµÄBug£¬¸ÄÎªÀûÓÃ"norminv"½âËããÐÖµ£¬
-    ¿É¼ûÔËÐÐËÙ¶ÈÏÔÖøÌá¸ß£¬Í¬Ê±¸ÄÎªvar¼ÆËã·½²î£¬¸ÐÐ»ÍøÓÑµÄÌáÐÑ¡£
-2022/12/17(ÒÔÉÏ)
+    æœ¬å‡½æ•°æ˜¯æ•´ä¸ªä»¿çœŸçš„ä¸»å‡½æ•°ï¼Œç”¨äºŽç ”ç©¶åœ¨ç§»åŠ¨é€šä¿¡æ—¶ï¼Œä¿¡å™ªæ¯”å¯¹è¯¯ç çŽ‡çš„å½±å“
+é¦–å…ˆç”ŸæˆéšæœºåŒæžæ€§ç ï¼Œç„¶åŽç»è¿‡æ‰©é¢‘ï¼ŒåŠ æ‰°ï¼ŒBPSKè°ƒåˆ¶ï¼ŒåŠ é«˜æ–¯ç™½å™ªå£°ï¼Œæ··åˆ
+ç„¶åŽæ¨¡æ‹ŸæŽ¥æ”¶ç«¯çš„è§£è°ƒï¼ŒåŽ»æ‰°ï¼Œè§£æ‰©ï¼Œåˆ¤å†³ã€‚
+    é€šè¿‡æ¯”è¾ƒæŽ¥æ”¶ç«¯åˆ¤å†³è¾“å‡ºä¸ŽåŽŸæ¥çš„ç å…ƒï¼Œè®¡ç®—å‡ºè¯¯ç çŽ‡ï¼Œé¦–å…ˆé€šä¿¡ç³»ç»Ÿçš„ä»¿çœŸ
+ä»¥åŠè¯¯ç çŽ‡-ä¿¡å™ªæ¯”çš„å˜åŒ–æ›²çº¿çš„ç»˜åˆ¶.
+2019/11/22(ä»¥ä¸Š)
+    åœ¨å½“å‰ç‰ˆæœ¬ä¸­ï¼Œæ·»åŠ äº†å¯¹ä¿¡å™ªæ¯”&è¯¯ç çŽ‡æ›²çº¿éšBPSKè°ƒåˆ¶è½½æ³¢æŒ¯å¹…å˜åŒ–è€Œå˜åŒ–
+çš„ç›¸å…³ç ”ç©¶åŠŸèƒ½ã€‚å› ä¸ºå®žé™…å‘çŽ°ï¼Œä¹‹å‰çš„ä»£ç ä¸­æ›²çº¿ä¼šåœ¨-20dBåˆ°0dBå¤„å‡ºçŽ°å¹³ç¼“çŽ°è±¡ï¼Œ
+å®žé™…æŽ’æŸ¥å‘çŽ°æ˜¯è½½æ³¢çš„æŒ¯å¹…å¯¼è‡´çš„ã€‚æŒ¯å¹…ç ”ç©¶ç»“æžœå‘çŽ°ï¼šæŒ¯å¹…å°äºŽ0.4æ—¶ï¼Œç³»ç»Ÿæ— æ³•æ­£å¸¸
+å·¥ä½œï¼å…¶è¯¯ç çŽ‡æ›²çº¿åœ¨åŽæœŸéšç€ä¿¡å™ªæ¯”çš„å¢žåŠ å‘ˆçŽ°åå¸¸è†¨èƒ€ï¼
+^-^æƒ³è¦å¾—åˆ°æŠ›ç‰©çº¿ï¼Œåªæœ‰åœ¨è½½æ³¢æŒ¯å¹…ä¸º1çš„æ—¶å€™ã€‚^-^,ä¸ç„¶éšç€æŒ¯å¹…çš„å¢žåŠ ï¼Œæ›²çº¿æ›²çº¿è¶‹äºŽå¹³ç¼“çš„ä¿¡å™ªæ¯”èŒƒå›´ä¼šè¶Šå¤§ï¼›
+åŒæ—¶å‘çŽ°å¤§äºŽ0.6çš„æ›²çº¿ä¼šè¿‘ä¼¼ç›¸äº¤äºŽæŸä¸€ç‚¹ï¼Œäº¤ç‚¹å‰åŒç­‰ä¿¡å™ªæ¯”ä¸‹æŒ¯å¹…é«˜çš„è¯¯ç çŽ‡ä½Žï¼Œä½†åœ¨äº¤ç‚¹åŽ
+***åŒç­‰çš„ä¿¡å™ªæ¯”ä¸‹æŒ¯å¹…å°çš„è¯¯ç çŽ‡åè€Œä½Žï¼ï¼ï¼***
+    åœ¨æœ¬ç‰ˆæœ¬ä¸­ï¼ŒwalshçŸ©é˜µçš„æ‰€æœ‰ç å…ƒéƒ½è¢«ç”¨äºŽæ‰©é¢‘ï¼Œæ²¡æœ‰ä½¿ç”¨å‰ä¸€ç‰ˆçš„çŸ©é˜µæˆªå–æ–¹æ³•ï¼Œ
+è§„é¿äº†é¬¼é­…ç‰ˆçš„éžä¸¥æ ¼æ­£äº¤é—®é¢˜ï¼Œä½†å‰é¢çš„æˆªå–ç‰ˆæœ¬æ°æ°è¯´æ˜Žéžä¸¥æ ¼æ­£äº¤å¯¹æœ¬ç³»ç»Ÿå½±å“æ›²çº¿
+çš„å½±å“å¹¶ä¸æ˜¯å¾ˆå¤§ï¼Œä½†å´å¯ä»¥ä½¿å¾—ç³»ç»Ÿèƒ½åœ¨æ›´ä½Žçš„è¯¯ç çŽ‡ä¸‹å·¥ä½œã€‚
+    è‡³æ­¤ï¼Œä»£ç å·²ç»ç»åŽ†10æ¬¡ç‰ˆæœ¬è¿­ä»£ã€‚
+2019/12/1(ä»¥ä¸Š)
+    ç¬¬äºŒæ¬¡ç­”è¾©ï¼Œä»å‡ºçŽ°éƒ¨åˆ†å¹³æ»‘é—®é¢˜ï¼Œå¹¶ä¸”è€å¸ˆè¯´ç³»ç»Ÿæ€§èƒ½å¤ªå¥½äº†ï¼Œä¸Žå®žé™…ç³»ç»Ÿä¸ç¬¦ï¼Œå¹¶ä¸”
+æ›²çº¿ä¸åº”è¯¥å—æŒ¯å¹…çš„å½±å“ï¼ŒåŸºäºŽæ­¤å†å¯¹ä»£ç åšä¿®æ”¹ï¼Œè®¡ç®—äº†è¾“å…¥ä¿¡å·çš„å¹³å‡åŠŸçŽ‡ï¼Œä½œä¸ºç¬¬3
+ä¸ªå‚æ•°ä¼ ç»™awgnï¼Œå¦åˆ™awgnä¼šæŠŠè¾“å…¥ä¿¡å·çš„åŠŸçŽ‡è§†ä¸º0dBWï¼çŽ°åœ¨æ›²çº¿åŸºæœ¬é‡åˆã€‚ä½†0.2ä¸Ž0.4
+çš„é—®é¢˜ä»æœªè§£å†³ï¼
+    è‡³æ­¤ï¼Œç¨‹åºç¬¬11æ¬¡ç‰ˆæœ¬è¿­ä»£
+2019/12/2(ä»¥ä¸Š)
+    ç¬¬åäºŒæ¬¡è¿­ä»£ã€‚
+    å‘çŽ°äº†ä¸ºä»€ä¹ˆæŒ¯å¹…æ˜¯0.2å’Œ0.4æ—¶ï¼Œç³»ç»Ÿæ— æ³•æ­£å¸¸å·¥ä½œçš„åŽŸå› ï¼Œæ˜¯å› ä¸º
+bitMultipleå‡½æ•°æŠŠè¿ç®—ç»“æžœæ ¼å¼è½¬æ¢æˆäº†int8ï¼Œå¯¼è‡´ç²¾åº¦å¤§é‡å¤±çœŸï¼å½“æ—¶è½¬æ¢æ ¼å¼æ˜¯ä¸º
+å†…å­˜ç©ºé—´ä¸Žè¿è¡Œé€Ÿåº¦åšæ‰“ç®—ï¼Œç»“æžœä»Šå¤©å‘çŽ°åšäº†è´Ÿä¼˜åŒ–ï¼ä¿®æ”¹åŽï¼Œå‘çŽ°è½½æ³¢æŒ¯å¹…å¯¹äºŽç³»ç»Ÿ
+çš„è¯¯ç çŽ‡æ›²çº¿å‡ ä¹Žæ— å½±å“ã€‚
+    å¦å¤–ï¼Œè§£è°ƒå‡½æ•°ä¹Ÿåšäº†ä¿®æ”¹ï¼Œä¼šæ ¹æ®è¾“å…¥è‡ªåŠ¨è®¡ç®—åˆ¤å†³é˜ˆå€¼ï¼Œè§£å†³äº†ä¹‹å‰äººä¸ºè®¾å®šé˜ˆå€¼
+çš„å±€é™ï¼Œé˜ˆå€¼é‡‡ç”¨æ­£æ€åˆ†å¸ƒè§£ç®—æ³•ï¼Œè¯¦è§demodulateå‡½æ•°å†…æ³¨é‡Šã€‚
+2020/7/1(ä»¥ä¸Š)
+    i7-4790:å®žæµ‹é€ŸçŽ‡9.8ç§’/è½®å›ž @1280*2&1280ç å…ƒ20&10æ‰©é¢‘å¢žç›Š
+    ç¬¬åä¸‰æ¬¡è¿­ä»£ã€‚
+    è§£å†³åŠ æ‰°å‡½æ•°åªä½¿ç”¨äº†Måºåˆ—ç¬¬ä¸€è¡Œçš„é—®é¢˜ã€‚
+2022/1/21(ä»¥ä¸Š)
+    i7-12700K:å®žæµ‹é€ŸçŽ‡ 2.4ç§’/è½®å›ž @1280*2&1280ç å…ƒ20&10æ‰©é¢‘å¢žç›Š
+    Moduleå‡½æ•°åæ”¹åä¸ºmyModuleï¼Œé˜²æ­¢ä¸ŽMatlabå†…å»ºå‡½æ•°é‡åçš„bug
+    ä¿®æ”¹testModulateå‡½æ•°ï¼Œå¢žåŠ rowç å…ƒé•¿åº¦ï¼Œé˜²æ­¢ç å…ƒä¸Žæ‰©é¢‘ç è¢«äº¤æ¢çš„bug
+2022/4/28(ä»¥ä¸Š)
+    i7-12700K:å®žæµ‹é€ŸçŽ‡ 0.91ç§’/è½®å›ž @1280*2&1280ç å…ƒ20&10æ‰©é¢‘å¢žç›Š 12çº¿ç¨‹
+    ä¿®å¤è§£è°ƒæ¨¡å—é˜ˆå€¼è§£ç®—çš„Bugï¼Œæ”¹ä¸ºåˆ©ç”¨"norminv"è§£ç®—é˜ˆå€¼ï¼Œ
+    å¯è§è¿è¡Œé€Ÿåº¦æ˜¾è‘—æé«˜ï¼ŒåŒæ—¶æ”¹ä¸ºvarè®¡ç®—æ–¹å·®ï¼Œæ„Ÿè°¢ç½‘å‹çš„æé†’ã€‚
+2022/12/17(ä»¥ä¸Š)
 %}
 clear variable;
 close all;
 
-mulTimes = 5;  %ÂÖ»Ø´ÎÊý
+mulTimes = 5;  %è½®å›žæ¬¡æ•°
 
-walshOrder = 64;    %walshÂëµÄ½×Êý£¬±ØÐë´óÓÚÀ©ÆµÔöÒæ
+walshOrder = 64;    %walshç çš„é˜¶æ•°ï¼Œå¿…é¡»å¤§äºŽæ‰©é¢‘å¢žç›Š
 
-N1 = 1280*2;   %ÓÃ»§1ÂëÔªÊýÁ¿
-N2 = 1280;   %ÓÃ»§2ÂëÔªÊýÁ¿
+N1 = 1280*2;   %ç”¨æˆ·1ç å…ƒæ•°é‡
+N2 = 1280;   %ç”¨æˆ·2ç å…ƒæ•°é‡
 
-user1SPgain = 10;  %ÓÃ»§1µÄÀ©ÆµÔöÒæ
-user2SPgain = 20;  %ÓÃ»§2µÄÀ©ÆµÔöÒæ
+user1SPgain = 10;  %ç”¨æˆ·1çš„æ‰©é¢‘å¢žç›Š
+user2SPgain = 20;  %ç”¨æˆ·2çš„æ‰©é¢‘å¢žç›Š
 
-%¼ÇÂ¼Á½¸öÓÃ»§µÄwalshÏàÎ»,×¢ÒâÏàÎ»±ØÐëÔÚ1µ½64Ö®¼äÈ¡Öµ
-%Á½¸öÓÃ»§µÄÈ¡Öµ²»ÄÜÒ»Ñù
-user1Phase = 2; %ÓÃ»§1µÄÏàÎ»
-user2Phase = 16; %ÓÃ»§2µÄÏàÎ»
+%è®°å½•ä¸¤ä¸ªç”¨æˆ·çš„walshç›¸ä½,æ³¨æ„ç›¸ä½å¿…é¡»åœ¨1åˆ°64ä¹‹é—´å–å€¼
+%ä¸¤ä¸ªç”¨æˆ·çš„å–å€¼ä¸èƒ½ä¸€æ ·
+user1Phase = 2; %ç”¨æˆ·1çš„ç›¸ä½
+user2Phase = 16; %ç”¨æˆ·2çš„ç›¸ä½
 
-%¼ÓÈÅÊ¹ÓÃµÄmÐòÁÐµÄ²ÎÊý
-mOrder = 5; %¼¶Êý5¼¶
-feedBack = 67;%·´À¡ÏµÊý67
+%åŠ æ‰°ä½¿ç”¨çš„måºåˆ—çš„å‚æ•°
+mOrder = 5; %çº§æ•°5çº§
+feedBack = 67;%åé¦ˆç³»æ•°67
 
-%µ÷ÕûÊ±£¬°ë¸öÖÜÆÚµÄ²ÉÑùµãÊý
+%è°ƒæ•´æ—¶ï¼ŒåŠä¸ªå‘¨æœŸçš„é‡‡æ ·ç‚¹æ•°
 samplePiont = 4;
 
-%Éú³ÉÐèÒªÊ¹ÓÃµÄwalshÂë
+%ç”Ÿæˆéœ€è¦ä½¿ç”¨çš„walshç 
 walshCode = walsh(walshOrder);
 
-%Õë¶ÔµÍÐÔÄÜµçÄÔ×öÓÅ»¯£¬²ÉÈ¡ÒÔÊ±¼ä»»È¡¿Õ¼äµÄË¼Â·
-maxSnr = 40;    %³¢ÊÔµÄ×î´óÐÅÔë±È
-minSnr = -20;   %³¢ÊÔµÄ×îÐ¡ÐÅÔë±È
-div = 1;      %ÐÅÔë±ÈµÄ³¢ÊÔ²½½ø
-maxTime = (maxSnr-minSnr)/div;  %³¢ÊÔ´ÎÊý
+%é’ˆå¯¹ä½Žæ€§èƒ½ç”µè„‘åšä¼˜åŒ–ï¼Œé‡‡å–ä»¥æ—¶é—´æ¢å–ç©ºé—´çš„æ€è·¯
+maxSnr = 40;    %å°è¯•çš„æœ€å¤§ä¿¡å™ªæ¯”
+minSnr = -20;   %å°è¯•çš„æœ€å°ä¿¡å™ªæ¯”
+div = 1;      %ä¿¡å™ªæ¯”çš„å°è¯•æ­¥è¿›
+maxTime = (maxSnr-minSnr)/div;  %å°è¯•æ¬¡æ•°
 timesUser1Acc = zeros(mulTimes,maxTime);
 timesUser2Acc = zeros(mulTimes,maxTime);
 
-%Éú³ÉË«¼«ÐÔÂëÆ¬
+%ç”ŸæˆåŒæžæ€§ç ç‰‡
 user1 = genBipolar(N1);
 user2 = genBipolar(N2);   
 
-%À©Æµ
+%æ‰©é¢‘
 spread1 = spreadSpectrum(user1,walshCode,user1SPgain,user1Phase);
 spread2 = spreadSpectrum(user2,walshCode,user2SPgain,user2Phase);
 
-%¼ÓÈÅ
-Mseq1 = MseqGen(mOrder,feedBack); %ÓÃ»§1¼ÓÈÅÓÃµÄmÐòÁÐ
+%åŠ æ‰°
+Mseq1 = MseqGen(mOrder,feedBack); %ç”¨æˆ·1åŠ æ‰°ç”¨çš„måºåˆ—
 Mseq1 = Mseq1(:);
-Mseq2 = MseqGen(mOrder,feedBack); %ÓÃ»§2¼ÓÈÅÓÃµÄmÐòÁÐ
+Mseq2 = MseqGen(mOrder,feedBack); %ç”¨æˆ·2åŠ æ‰°ç”¨çš„måºåˆ—
 Mseq2 = Mseq2(:);
 user1scarm = scarmbling(spread1,Mseq1);
 user2scarm = scarmbling(spread2,Mseq2);
 
-maxAmp = 1.2;    %³¢ÊÔµÄ×î´óÔØ²¨Õñ·ù
-minAmp = 0.2;   %³¢ÊÔµÄ×îÐ¡ÔØ²¨Õñ·ù
-divAmp = 0.2;      %ÔØ²¨Õñ·ùµÄ³¢ÊÔ²½½ø
-maxTimesAmp = floor((maxAmp-minAmp)/divAmp);  %Õñ·ù³¢ÊÔ´ÎÊý
+maxAmp = 1.2;    %å°è¯•çš„æœ€å¤§è½½æ³¢æŒ¯å¹…
+minAmp = 0.2;   %å°è¯•çš„æœ€å°è½½æ³¢æŒ¯å¹…
+divAmp = 0.2;      %è½½æ³¢æŒ¯å¹…çš„å°è¯•æ­¥è¿›
+maxTimesAmp = floor((maxAmp-minAmp)/divAmp);  %æŒ¯å¹…å°è¯•æ¬¡æ•°
 
 ampRecords1 = zeros(maxTimesAmp,maxTime);
 ampRecords2 = zeros(maxTimesAmp,maxTime);
 
-for amp = 1:maxTimesAmp %²âÊÔ²»Í¬µÄÔØ²¨Õñ·ùÏÂµÄÇúÏß
+for amp = 1:maxTimesAmp %æµ‹è¯•ä¸åŒçš„è½½æ³¢æŒ¯å¹…ä¸‹çš„æ›²çº¿
     
-    fprintf('Ä¿Ç°ÕýÔÚµÚ%d¸öÕñ·ù\n',amp);
+    fprintf('ç›®å‰æ­£åœ¨ç¬¬%dä¸ªæŒ¯å¹…\n',amp);
 
-    %µ÷ÖÆBPSK
-    %Éú³ÉÔØ²¨,Á½ÓÃ»§Ê¹ÓÃÍ¬Ò»¸öÔØ²¨
+    %è°ƒåˆ¶BPSK
+    %ç”Ÿæˆè½½æ³¢,ä¸¤ç”¨æˆ·ä½¿ç”¨åŒä¸€ä¸ªè½½æ³¢
     carrier = (minAmp + divAmp*(amp-1))*sin(0:(pi/samplePiont):(2*pi-2*pi/samplePiont));
     user1modulate = myModulate(user1scarm,carrier);
     user2modulate = myModulate(user2scarm,carrier);
     
-    %¼ÆËãÔØ²¨¹¦ÂÊ
-    power = powerCnt(carrier);
     for times = 1:mulTimes
 
-        fprintf('Ä¿Ç°ÕýÔÚµÚ%d¸öÂÖ»Ø\n',times);
+        fprintf('ç›®å‰æ­£åœ¨ç¬¬%dä¸ªè½®å›ž\n',times);
 
         user1Acc = zeros(1,maxTime);
         user2Acc = zeros(1,maxTime);
 
         parfor index = 1:maxTime 
-            snr = minSnr + (index-1)*div; %¼ÓÔÚ·¢ËÍÐÅºÅÉÏµÄ¸ßË¹ÔëÉùµÄÐÅÔë±È(dBW)
+            snr = minSnr + (index-1)*div; %åŠ åœ¨å‘é€ä¿¡å·ä¸Šçš„é«˜æ–¯å™ªå£°çš„ä¿¡å™ªæ¯”(dBW)
                         
-            %Í¨¹ý¸ßË¹ÐÅµÀ£¬Ìí¼Ó¸ßË¹ÔëÉù
-            user1send = awgn(user1modulate,snr,power);
-            user2send = awgn(user2modulate,snr,power);
+            %é€šè¿‡é«˜æ–¯ä¿¡é“ï¼Œæ·»åŠ é«˜æ–¯å™ªå£°
+            user1send = awgn(user1modulate,snr);
+            user2send = awgn(user2modulate,snr);
 
-            %½ÓÊÕ·½
-            receive = user1send + user2send; %ÊÕµ½»ìºÏÆðÀ´µÄÐÅºÅ
+            %æŽ¥æ”¶æ–¹
+            receive = user1send + user2send; %æ”¶åˆ°æ··åˆèµ·æ¥çš„ä¿¡å·
 
-            %½âµ÷
+            %è§£è°ƒ
             demodulateRes = demodulate(receive,carrier);
 
-            %È¥ÈÅ
+            %åŽ»æ‰°
             user1Descarm = deScarmbling(demodulateRes,Mseq1);
             user2Descarm = deScarmbling(demodulateRes,Mseq2);
 
-            %½âÀ©
+            %è§£æ‰©
             user1deDS = deSpreadSpectrum(user1Descarm,walshCode,user1SPgain,user1Phase);
             user2deDS = deSpreadSpectrum(user2Descarm,walshCode,user2SPgain,user2Phase);
 
-            %¼ÆËãÎóÂëÂÊ
+            %è®¡ç®—è¯¯ç çŽ‡
             [~,user1Accuracy] = compare(user1,user1deDS);
             [~,user2Accuracy] = compare(user2,user2deDS);
             user1Acc(index) = 1-user1Accuracy;
@@ -153,7 +151,7 @@ for amp = 1:maxTimesAmp %²âÊÔ²»Í¬µÄÔØ²¨Õñ·ùÏÂµÄÇúÏß
         timesUser1Acc(times,:) = user1Acc;
         timesUser2Acc(times,:) = user2Acc;
     end
-    %×Ü½áÍ³¼Æ¶à´ÎÊµÑéµÄ½á¹û
+    %æ€»ç»“ç»Ÿè®¡å¤šæ¬¡å®žéªŒçš„ç»“æžœ
     for i = 1:maxTime
         user1Acc(i) = mean(timesUser1Acc(:,i));
         user2Acc(i) = mean(timesUser2Acc(:,i));
@@ -162,35 +160,35 @@ for amp = 1:maxTimesAmp %²âÊÔ²»Í¬µÄÔØ²¨Õñ·ùÏÂµÄÇúÏß
     ampRecords2(amp,:) = user2Acc;
 end
 
-%ÎóÂëÂÊËæÐÅÔë±ÈµÄ±ä»¯ÇúÏß
+%è¯¯ç çŽ‡éšä¿¡å™ªæ¯”çš„å˜åŒ–æ›²çº¿
 figure(1);
 X1 = (minSnr:div:maxSnr-div);
 semilogy(X1,ampRecords1(5,:),'b');
-xlabel('ÐÅÔë±È(dB)');
-ylabel('ÎóÂëÂÊ');
-title('ÎóÂëÂÊËæÐÅÔë±ÈµÄ±ä»¯ÇúÏß');
+xlabel('ä¿¡å™ªæ¯”(dB)');
+ylabel('è¯¯ç çŽ‡');
+title('è¯¯ç çŽ‡éšä¿¡å™ªæ¯”çš„å˜åŒ–æ›²çº¿');
 hold on;
 semilogy(X1,ampRecords2(5,:),'g');
-legend('ÓÃ»§1(À©ÆµÔöÒæ10)','ÓÃ»§2(À©ÆµÔöÒæ20)');
+legend('ç”¨æˆ·1(æ‰©é¢‘å¢žç›Š10)','ç”¨æˆ·2(æ‰©é¢‘å¢žç›Š20)');
 
-%ÓÃ»§1Õñ·ù²»Í¬µÄÎóÂëÂÊËæÐÅÔë±ÈµÄ±ä»¯ÇúÏß
+%ç”¨æˆ·1æŒ¯å¹…ä¸åŒçš„è¯¯ç çŽ‡éšä¿¡å™ªæ¯”çš„å˜åŒ–æ›²çº¿
 figure(2);
 for i = 1:maxTimesAmp
     semilogy(X1,ampRecords1(i,:));
     hold on;
 end
-xlabel('ÐÅÔë±È(dB)');
-ylabel('ÎóÂëÂÊ');
-title('ÓÃ»§1Õñ·ù²»Í¬µÄÎóÂëÂÊËæÐÅÔë±ÈµÄ±ä»¯ÇúÏß');
+xlabel('ä¿¡å™ªæ¯”(dB)');
+ylabel('è¯¯ç çŽ‡');
+title('ç”¨æˆ·1æŒ¯å¹…ä¸åŒçš„è¯¯ç çŽ‡éšä¿¡å™ªæ¯”çš„å˜åŒ–æ›²çº¿');
 legend('0.2','0.4','0.6','0.8','1.0');
 
-%ÓÃ»§2Õñ·ù²»Í¬µÄÎóÂëÂÊËæÐÅÔë±ÈµÄ±ä»¯ÇúÏß
+%ç”¨æˆ·2æŒ¯å¹…ä¸åŒçš„è¯¯ç çŽ‡éšä¿¡å™ªæ¯”çš„å˜åŒ–æ›²çº¿
 figure(3);
 for i = 1:maxTimesAmp
     semilogy(X1,ampRecords2(i,:));
     hold on;
 end
-xlabel('ÐÅÔë±È(dB)');
-ylabel('ÎóÂëÂÊ');
-title('ÓÃ»§2Õñ·ù²»Í¬µÄÎóÂëÂÊËæÐÅÔë±ÈµÄ±ä»¯ÇúÏß');
+xlabel('ä¿¡å™ªæ¯”(dB)');
+ylabel('è¯¯ç çŽ‡');
+title('ç”¨æˆ·2æŒ¯å¹…ä¸åŒçš„è¯¯ç çŽ‡éšä¿¡å™ªæ¯”çš„å˜åŒ–æ›²çº¿');
 legend('0.2','0.4','0.6','0.8','1.0');
